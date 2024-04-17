@@ -1,10 +1,8 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { selectCount } from "./counterSlice";
+import { Link } from "react-router-dom";
+
 
 export default function Login() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
 
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -81,12 +79,12 @@ export default function Login() {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Not a member?{" "}
-          <a
-            href="#"
+          <Link
+            to="/sign-up"
             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
           >
             Create a new Account
-          </a>
+          </Link>
         </p>
       </div>
     </div>
