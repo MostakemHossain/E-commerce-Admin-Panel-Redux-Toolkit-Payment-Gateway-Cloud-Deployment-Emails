@@ -30,7 +30,7 @@ const products = [
   // More products...
 ];
 
-export default function Counter() {
+export default function Cart() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true);
 
@@ -104,7 +104,7 @@ export default function Counter() {
           </p>
           <div className="mt-6">
             <Link
-              to=""
+              to="/checkout"
               className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
             >
               Checkout
@@ -113,7 +113,8 @@ export default function Counter() {
           <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
             <p>
               or{" "}
-              <button
+             <Link to='/'>
+             <button
                 type="button"
                 className="font-medium text-indigo-600 hover:text-indigo-500"
                 onClick={() => setOpen(false)}
@@ -121,6 +122,7 @@ export default function Counter() {
                 Continue Shopping
                 <span aria-hidden="true"> &rarr;</span>
               </button>
+             </Link>
             </p>
           </div>
         </div>
